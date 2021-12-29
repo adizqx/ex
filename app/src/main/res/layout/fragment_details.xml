@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".detailsFragment">
-
+    tools:context=".detailsFragment"
+    android:id="@+id/fl">
     <LinearLayout
 
         android:layout_width="match_parent"

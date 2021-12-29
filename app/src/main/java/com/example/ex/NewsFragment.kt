@@ -1,19 +1,15 @@
 package com.example.ex
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.ex.models.Constance
 import com.example.ex.models.NewsAdapter
-import com.example.ex.models.data
 
 class NewsFragment : Fragment() {
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,3 +25,4 @@ class NewsFragment : Fragment() {
     }
 
 }
+

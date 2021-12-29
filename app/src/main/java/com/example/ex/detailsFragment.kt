@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
@@ -26,14 +27,17 @@ class detailsFragment : Fragment() {
         title = view.findViewById(R.id.tvName2)
         image = view.findViewById(R.id.im2)
         desc = view.findViewById(R.id.tvDescr2)
+
         var res = arguments?.getSerializable("item") as data
         title.text = res.name
         Glide.with(this)
             .load(res.image)
             .into(image)
         desc.text = res.discription
+
         return view
     }
+
 
 
 
