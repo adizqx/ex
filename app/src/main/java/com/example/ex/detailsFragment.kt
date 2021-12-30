@@ -17,6 +17,7 @@ class detailsFragment : Fragment() {
     lateinit var title: TextView
     lateinit var image: ImageView
     lateinit var desc: TextView
+    lateinit var frameLayout: FrameLayout
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,6 +28,7 @@ class detailsFragment : Fragment() {
         title = view.findViewById(R.id.tvName2)
         image = view.findViewById(R.id.im2)
         desc = view.findViewById(R.id.tvDescr2)
+        frameLayout = view.findViewById(R.id.fl)
 
         var res = arguments?.getSerializable("item") as data
         title.text = res.name
@@ -34,6 +36,8 @@ class detailsFragment : Fragment() {
             .load(res.image)
             .into(image)
         desc.text = res.discription
+        desc.setTextColor(ContextCompat.getColor(requireContext(), res.bColor))
+        frameLayout.setBackgroundResource(res.color)
 
         return view
     }
